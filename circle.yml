@@ -1,0 +1,6 @@
+deployment:
+  staging:
+    branch: master
+    commands:
+      - git push git@github.com:SaltSoldier/konoyubitomare.git $CIRCLE_SHA1:master
+      - heroku run rake db:migrate --app konoyubitomare
