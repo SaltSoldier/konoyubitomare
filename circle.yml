@@ -2,5 +2,5 @@ deployment:
   staging:
     branch: master
     commands:
-      - git push https://git.heroku.com/konoyubitomare.git $CIRCLE_SHA1:master
+      - git push git@heroku.com:konoyubitomare.git $CIRCLE_SHA1:master
       - heroku run rake db:migrate --app konoyubitomare
