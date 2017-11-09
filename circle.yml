@@ -1,5 +1,5 @@
 deployment:
-  staging:
+  staging: 
     branch: master
     commands:
       - git push git@heroku.com:konoyubitomare.git $CIRCLE_SHA1:master
