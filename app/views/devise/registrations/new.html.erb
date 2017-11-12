@@ -26,6 +26,22 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.label "役職" %>
+    <%= f.radio_button :occupation, :planner %> プランナー
+    <%= f.radio_button :occupation, :engineer %> エンジニア
+    <%= f.radio_button :occupation, :designer %> デザイナー
+  </div>
+
+  <div class="field">
+    <%= f.label "やる気" %>
+    <%= f.radio_button :mochivation, :no_mochivation %> 全くやる気がない
+    <%= f.radio_button :mochivation, :little_no_mochivation %> 少しやる気がない
+    <%= f.radio_button :mochivation, :normal_mochivation %> 普通
+    <%= f.radio_button :mochivation, :pretty_mochivation %> 少しやる気がある
+    <%= f.radio_button :mochivation, :max_mochivation %> とてもやる気がある
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
