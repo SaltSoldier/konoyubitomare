@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   devise_for :users 
   devise_scope :user do
-    get 'sign_in', to: 'devise/sessions#new'
-    delete 'sign_out', to: 'devise/sessions#destroy'
+    get 'sign_in' => 'devise/sessions#new'
+    delete 'sign_out' => 'devise/sessions#destroy'
   end
 end
