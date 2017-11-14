@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20171110074108) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username"
-    t.integer "graduation_year"
+    t.string "graduation_year"
     t.integer "occupation"
     t.integer "mochivation"
     t.index ["email"], name: "index_users_on_email", unique: true

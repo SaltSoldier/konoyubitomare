@@ -42,6 +42,12 @@
     <%= f.radio_button :mochivation, :max_mochivation %> とてもやる気がある
   </div>
 
+  <div class="field">
+    <%= f.label "卒業年" %><br />
+    <%= f.date_select :graduation_year, { :discard_day => true, :discard_month => true, :start_year => Date.today.year } %>
+    <%# f.date_select :graduation_year, [:discord_day, :discord_month, :start_year => Date.today.year] %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
