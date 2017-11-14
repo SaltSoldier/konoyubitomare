@@ -7,7 +7,7 @@
 one: 
   username: SALT
   email: soltsoldier0730ra@gmail.com
-  password: aaaaaa
+  encrypted_password: aaaaaa
   graduation_year: 1994
   occupation: 0
   mochivation: 0
