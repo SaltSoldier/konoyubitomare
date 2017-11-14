@@ -18,9 +18,39 @@
         </nav>
       </div>
     </header>
-    <div class="container">
-      <h1>Home#index</h1>
-      <p>Find me in app/views/home/index.html.erb</p>
+    <div>
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="active" role="presentation">
+          <a aria-controls="tab_a" data-toggle="tab" href="#tab_a" role="tab">A</a>
+        </li>
+        <li role="presentation">
+          <a aria-controls="tab_b" data-toggle="tab" href="#tab_b" role="tab">B</a>
+        </li>
+        <li role="presentation">
+          <a aria-controls="tab_c" data-toggle="tab" href="#tab_c" role="tab">C</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="tab_a" role="tabpanel">
+          <div class="container">
+            <h1>Home#index</h1>
+            <p>Find me in app/views/home/index.html.erb</p>
+          </div>
+          <p>
+            タブAだよ
+          </p>
+        </div>
+        <div class="tab-pane" id="tab_b" role="tabpanel">
+          <p>
+            タブBです
+          </p>
+        </div>
+        <div class="tab-pane" id="tab_c" role="tabpanel">
+          <p>
+            タブC!!
+          </p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
