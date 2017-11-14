@@ -3,11 +3,12 @@ Rails.application.routes.draw do
   get 'index' => 'home#index'
   get 'authentication' => 'home#authentication'
 
+  devise_for :users 
+
   resources :users do
     resources :projects
   end
 
-  devise_for :users 
   devise_scope :user do
     get 'sign_in' => 'devise/sessions#new'
     delete 'sign_out' => 'devise/sessions#destroy'
