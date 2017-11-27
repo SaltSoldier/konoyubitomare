@@ -5,10 +5,4 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     get index_path
     assert_response :redirect
   end
-
-  test "should get authentication" do
-    get authentication_path
-    assert_response :redirect
-  end
-
 end
