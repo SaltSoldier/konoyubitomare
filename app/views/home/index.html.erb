@@ -19,6 +19,21 @@
       </div>
     </header>
     <div class="container">
+      <%= form_with(model: Project.new, local: true, url: projects_path) do |f| %>
+        <div class="field">
+          <%= f.label :title %><br />
+          <%= f.text_field :title, autofocus: true %>
+        </div>
+      
+        <div class="field">
+          <%= f.label :description %><br />
+          <%= f.text_field :description, autofocus: true %>
+        </div>
+      
+        <div class="actions">
+          <%= f.submit "投稿" %>
+        </div>
+      <% end %>
       <%= render "tab_layout" %>
     </div>
   </body>

@@ -5,9 +5,7 @@ Rails.application.routes.draw do
 
   devise_for :users 
 
-  resources :users do
-    resources :projects
-  end
+  resources :projects
 
   devise_scope :user do
     get 'sign_in' => 'devise/sessions#new'

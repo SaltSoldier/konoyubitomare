@@ -14,6 +14,16 @@
     <div class="tab-pane active" id="tab_a" role="tabpanel">
       <p>
         タブAだよ
+        <% @projects.each do |project| %>
+          <p>
+            <strong>Title:</strong>
+            <%= project.title %><br>
+            <strong>Description:</strong>
+            <%= project.description %>
+            <strong>UserID:</strong>
+            <%= project.user_id %>
+          </p>
+        <% end %>
       </p>
     </div>
     <div class="tab-pane" id="tab_b" role="tabpanel">
