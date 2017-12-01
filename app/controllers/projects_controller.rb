@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
         format.html { redirect_to root_path, notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
       else
-        format.html { render :new }
+        format.html { redirect_to root_path, notice: '投稿できませんでした'}
         format.json { render json: @project.errors, status: :unprocessable_entity }
       end
     end
