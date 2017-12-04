@@ -1,7 +1,7 @@
 class Project < ApplicationRecord
   belongs_to :user
 
-  enum posting_genre: { planning: 0, skils: 1 }
+  enum posting_genre: { planning: 0, skills: 1 }
 
   with_options presence: true do
     validates :title, length: { maximum: 20 }

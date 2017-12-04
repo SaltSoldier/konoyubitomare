@@ -15,14 +15,14 @@
       <p>
         <% @projects.each do |project| %>
           <p>
+            <strong>ユーザ名</strong><br>
+	    <%= @user.find(project.user_id).username %><br>
             <strong>投稿ジャンル</strong><br>
             <%= project.posting_genre_i18n %><br>
             <strong>投稿タイトル</strong><br>
             <%= project.title %><br>
             <strong>投稿内容</strong><br>
             <%= simple_format(project.description) %><br>
-            <strong>ユーザ名</strong><br>
-            <%= @user.find(project.user_id).username %>
           </p>
           <hr>
         <% end %>
