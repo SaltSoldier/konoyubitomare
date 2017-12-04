@@ -16,7 +16,7 @@
         <% @projects.each do |project| %>
           <p>
             <strong>ユーザ名</strong><br>
-	    <%= @user.find(project.user_id).username %><br>
+            <%= @user.find(project.user_id).username %><br>
             <strong>投稿ジャンル</strong><br>
             <%= project.posting_genre_i18n %><br>
             <strong>投稿タイトル</strong><br>
@@ -30,10 +30,40 @@
     </div>
     <div class="tab-pane" id="tab_b" role="tabpanel">
       <p>
+        <% @projects.each do |project| %>
+          <% if project.posting_genre == "planning" then %>
+            <p>
+              <strong>ユーザ名</strong><br>
+              <%= @user.find(project.user_id).username %><br>
+              <strong>投稿ジャンル</strong><br>
+              <%= project.posting_genre_i18n %><br>
+              <strong>投稿タイトル</strong><br>
+              <%= project.title %><br>
+              <strong>投稿内容</strong><br>
+              <%= simple_format(project.description) %><br>
+            </p>
+            <hr>
+          <% end %>
+        <% end %>
       </p>
     </div>
     <div class="tab-pane" id="tab_c" role="tabpanel">
       <p>
+        <% @projects.each do |project| %>
+          <% if project.posting_genre == "skills" then %>
+            <p>
+              <strong>ユーザ名</strong><br>
+              <%= @user.find(project.user_id).username %><br>
+              <strong>投稿ジャンル</strong><br>
+              <%= project.posting_genre_i18n %><br>
+              <strong>投稿タイトル</strong><br>
+              <%= project.title %><br>
+              <strong>投稿内容</strong><br>
+              <%= simple_format(project.description) %><br>
+            </p>
+            <hr>
+          <% end %>
+        <% end %>
       </p>
     </div>
   </div>
