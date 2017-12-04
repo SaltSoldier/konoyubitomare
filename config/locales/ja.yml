@@ -1,0 +1,6 @@
+ja:
+  enum:
+    project:
+      posting_genre:
+        planning: 企画
+        skils: スキル
