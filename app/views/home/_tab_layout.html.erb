@@ -13,27 +13,27 @@
   <div class="tab-content">
     <div class="tab-pane active" id="tab_a" role="tabpanel">
       <p>
-        タブAだよ
         <% @projects.each do |project| %>
           <p>
-            <strong>Title:</strong>
+            <strong>投稿ジャンル</strong><br>
+            <%= project.posting_genre %><br>
+            <strong>投稿タイトル</strong><br>
             <%= project.title %><br>
-            <strong>Description:</strong>
-            <%= project.description %>
-            <strong>UserID:</strong>
-            <%= project.user_id %>
+            <strong>投稿内容</strong><br>
+            <%= simple_format(project.description) %><br>
+            <strong>ユーザ名</strong><br>
+            <%= @user.find(project.user_id).username %>
           </p>
+          <hr>
         <% end %>
       </p>
     </div>
     <div class="tab-pane" id="tab_b" role="tabpanel">
       <p>
-        タブBです
       </p>
     </div>
     <div class="tab-pane" id="tab_c" role="tabpanel">
       <p>
-        タブC!!
       </p>
     </div>
   </div>
