@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>このゆびとまれ</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "このゆびとまれ", root_path, id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Log in", '#' %></li>
+            <li><%= link_to "Log out", sign_out_path, method: :delete %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <p id="notice"><%= notice %></p>
+      <%= form_with(model: Project.new, local: true, url: projects_path) do |f| %>
+        <div class="field">
+          <%= f.label "投稿タイトル" %><br/>
+          <%= f.text_field :title, autofocus: true, size: 40 %>
+        </div>
+      
+        <div class="field">
+          <%= f.label "投稿内容" %><br/>
+          <%= f.text_area :description, autofocus: true, cols: 40, rows: 5 %>
+        </div>
+        <div class="field">
+          <%= f.label "投稿ジャンル" %><br/>
+          <%= f.radio_button :posting_genre, :planning %> 企画
+          <%= f.radio_button :posting_genre, :skills %> スキル
+        </div>
+      
+        <div class="actions">
+          <%= f.submit "投稿" %><br/>
+        </div>
+      <% end %>
+      <%= render "tab_layout" %>
+    </div>
+  </body>
+</html>
